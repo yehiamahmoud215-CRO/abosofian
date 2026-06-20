@@ -2,15 +2,18 @@
 <html lang="ar" dir="rtl">
 <head>
 
-<!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+  ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
   ttq.load('D8R2UJ3C77U9LDPEDB90');
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End -->
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +24,7 @@
 <style>
 :root{--bg:#120403;--text:#2b160b;--muted:#7b6658;--main:#c2185b;--gold:#f59e0b;--max:1183px}
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding-bottom:110px}
 img,video{width:100%;display:block}
 .page{max-width:var(--max);margin:auto;background:#fffaf2;overflow:hidden}
@@ -75,10 +79,10 @@ img,video{width:100%;display:block}
 .expert-stat{background:#fff8ee;border:1px solid #ead8bd;border-radius:18px;padding:18px;text-align:center}
 .expert-stat strong{display:block;font-size:26px;color:var(--main);font-weight:900}
 .comments-grid{grid-template-columns:repeat(3,1fr)}
-.review-comment{text-align:right}
+.review-comment{text-align:right;background:#fff;color:#2b160b}
 .review-comment .stars{color:var(--gold);font-size:20px;margin-bottom:8px}
 .review-comment p{color:#5c4636;font-size:17px;font-weight:700}
-.review-comment strong{display:block;margin-top:14px}
+.review-comment strong{display:block;margin-top:14px;color:#2b160b;font-size:17px;font-weight:900}
 .info-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
 .info-tabs button{border:none;cursor:pointer;padding:15px 10px;border-radius:999px;background:#fff;color:#2b160b;font-weight:900;border:1px solid #ead8bd}
 .info-tabs button.active{background:var(--main);color:#fff}
@@ -209,20 +213,9 @@ img,video{width:100%;display:block}
   </div>
 
   <div class="hijama-types-grid">
-    <div class="hijama-type-card">
-      <strong>حجامة جافة</strong>
-      <p>مناسبة لمن يريد تجربة ألطف بدون دم، وتركز على الشفط وتحفيز مناطق محددة حسب الحاجة.</p>
-    </div>
-
-    <div class="hijama-type-card">
-      <strong>حجامة دموية</strong>
-      <p>تتم فقط عند الحاجة وبطريقة منظمة، وبعد توضيح كامل للعميل وتهيئة الأدوات المناسبة.</p>
-    </div>
-
-    <div class="hijama-type-card">
-      <strong>أنواع حسب الحالة</strong>
-      <p>كل حالة لها احتياج مختلف؛ لذلك يتم اختيار الطريقة المناسبة بعد فهم المشكلة ومكان الألم أو الشد.</p>
-    </div>
+    <div class="hijama-type-card"><strong>حجامة جافة</strong><p>مناسبة لمن يريد تجربة ألطف بدون دم، وتركز على الشفط وتحفيز مناطق محددة حسب الحاجة.</p></div>
+    <div class="hijama-type-card"><strong>حجامة دموية</strong><p>تتم فقط عند الحاجة وبطريقة منظمة، وبعد توضيح كامل للعميل وتهيئة الأدوات المناسبة.</p></div>
+    <div class="hijama-type-card"><strong>أنواع حسب الحالة</strong><p>كل حالة لها احتياج مختلف؛ لذلك يتم اختيار الطريقة المناسبة بعد فهم المشكلة ومكان الألم أو الشد.</p></div>
   </div>
 </section>
 
@@ -276,43 +269,12 @@ img,video{width:100%;display:block}
   </div>
 
   <div class="comments-grid">
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>والله جلسة مرتبة جدًا، حسيت بفرق في الراحة بعد الجلسة، والأدوات كانت منظمة قدامي.</p>
-      <strong>أبو عبدالله</strong>
-    </div>
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>كان عندي شد في الرقبة والكتف، وبعد الجلسة حسيت جسمي أخف. شغل محترم ومواعيد دقيقة.</p>
-      <strong>سالم الحربي</strong>
-    </div>
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>أهم شيء عندي التعقيم والخصوصية، وكل شيء كان واضح ومرتب. الله يعطيه العافية.</p>
-      <strong>محمد العتيبي</strong>
-    </div>
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>تجربة ممتازة، الخدمة وصلتني في البيت بدون تعب أو انتظار، والأسلوب جدًا مريح.</p>
-      <strong>فهد القحطاني</strong>
-    </div>
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>كنت متردد أول مرة، لكن صراحة التعامل والتجهيز طمّنوني. إن شاء الله أكررها.</p>
-      <strong>ناصر الدوسري</strong>
-    </div>
-
-    <div class="review-comment">
-      <div class="stars">★★★★★</div>
-      <p>جلسة هادئة ونظيفة، حسيت براحة واسترخاء بعدها. أنصح فيه للي يحب الخدمة المنزلية.</p>
-      <strong>عبدالعزيز</strong>
-    </div>
-
+    <div class="review-comment"><div class="stars">★★★★★</div><p>والله جلسة مرتبة جدًا، حسيت بفرق في الراحة بعد الجلسة، والأدوات كانت منظمة قدامي.</p><strong>أبو عبدالله</strong></div>
+    <div class="review-comment"><div class="stars">★★★★★</div><p>كان عندي شد في الرقبة والكتف، وبعد الجلسة حسيت جسمي أخف. شغل محترم ومواعيد دقيقة.</p><strong>سالم الحربي</strong></div>
+    <div class="review-comment"><div class="stars">★★★★★</div><p>أهم شيء عندي التعقيم والخصوصية، وكل شيء كان واضح ومرتب. الله يعطيه العافية.</p><strong>محمد العتيبي</strong></div>
+    <div class="review-comment"><div class="stars">★★★★★</div><p>تجربة ممتازة، الخدمة وصلتني في البيت بدون تعب أو انتظار، والأسلوب جدًا مريح.</p><strong>فهد القحطاني</strong></div>
+    <div class="review-comment"><div class="stars">★★★★★</div><p>كنت متردد أول مرة، لكن صراحة التعامل والتجهيز طمّنوني. إن شاء الله أكررها.</p><strong>ناصر الدوسري</strong></div>
+    <div class="review-comment"><div class="stars">★★★★★</div><p>جلسة هادئة ونظيفة، حسيت براحة واسترخاء بعدها. أنصح فيه للي يحب الخدمة المنزلية.</p><strong>عبدالعزيز</strong></div>
   </div>
 </section>
 
@@ -388,6 +350,12 @@ img,video{width:100%;display:block}
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
+window.addEventListener('load', function(){
+  if (!window.location.hash) {
+    setTimeout(function(){ window.scrollTo(0,0); }, 50);
+  }
+});
+
 new Swiper('.product-slider',{
   loop:true,
   spaceBetween:18,
