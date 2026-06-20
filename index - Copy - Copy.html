@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أبو سفيان للحجامة المنزلية</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+:root{
+  --bg:#120403; --text:#2b160b; --muted:#7b6658;
+  --main:#c2185b; --gold:#f59e0b; --radius:24px; --max:1183px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding-bottom:110px}
+img,video{width:100%;display:block}
+.page{max-width:var(--max);margin:auto;background:#fffaf2;overflow:hidden}
+.section{padding:55px 20px}
+.badge{display:inline-block;background:#ffe8b0;color:#7a3b00;padding:8px 18px;border-radius:999px;font-weight:900;margin-bottom:18px}
+.hero{background:linear-gradient(180deg,#fff7ea,#fff);padding:55px 20px 35px;text-align:center}
+.hero h1{font-size:clamp(34px,6vw,68px);line-height:1.25;font-weight:900;margin-bottom:18px}
+.hero p{font-size:clamp(18px,3vw,28px);color:#5c4636;font-weight:700;max-width:850px;margin:auto}
+.stats,.problem-grid,.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.stat,.trust-card,.problem-card,.review-comment,.expert-box{background:#fff;border:1px solid #ead8bd;border-radius:22px;padding:22px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+.stat strong{display:block;font-size:26px;font-weight:900}
+.stat span,.trust-card p,.problem-card p{color:#7b6658;font-weight:700}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:60px;padding:0 38px;border-radius:999px;background:var(--main);color:#fff;font-size:22px;font-weight:900;text-decoration:none;margin-top:28px}
+.note{margin-top:12px;color:#7b6658;font-weight:700}
+.title{text-align:center;margin-bottom:30px}
+.title h2{font-size:clamp(28px,5vw,52px);font-weight:900}
+.title p{color:#7b6658;font-size:18px;font-weight:700}
+.swiper{width:100%}
+.product-slider{padding-bottom:45px}
+.product-slider .swiper-slide{background:#fff;border-radius:24px;border:1px solid #ead8bd;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.problem-grid{grid-template-columns:repeat(3,1fr)}
+.problem-card{background:#fff8ee}
+.problem-card h3,.trust-card strong{font-size:22px;margin-bottom:8px}
+.check-section,.reviews{background:#2b0b08;color:#fff;text-align:center}
+.check-section h2,.reviews .title h2,.reviews .title p{color:#fff}
+.check-list{max-width:850px;margin:28px auto 0;display:grid;gap:14px}
+.check-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:17px 20px;color:#fff;font-size:19px;font-weight:800;text-align:right}
+.video-box{background:#000;border-radius:26px;overflow:hidden;box-shadow:0 20px 45px rgba(0,0,0,.25)}
+.video-box video{aspect-ratio:16/9;object-fit:cover}
+.benefits{background:#fff7ea}
+.benefit-list{display:grid;gap:28px}
+.benefit-card{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:#fff;border:1px solid #ead8bd;border-radius:26px;overflow:hidden;box-shadow:0 14px 35px rgba(0,0,0,.08)}
+.benefit-card:nth-child(even){direction:ltr}
+.benefit-card:nth-child(even) .benefit-content{direction:rtl}
+.benefit-img{height:100%;min-height:340px}
+.benefit-img img{height:100%;object-fit:cover}
+.benefit-content{padding:38px}
+.benefit-content span{display:inline-block;background:#ffe8b0;color:#7a3b00;padding:7px 16px;border-radius:999px;font-weight:900;margin-bottom:14px}
+.benefit-content h3{font-size:clamp(27px,4vw,42px);font-weight:900;line-height:1.35;margin-bottom:14px}
+.benefit-content p,.expert-box p{color:#6b584b;font-size:19px}
+.expert-box h3{font-size:32px;margin-bottom:12px}
+.expert-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.expert-stat{background:#fff8ee;border:1px solid #ead8bd;border-radius:18px;padding:18px;text-align:center}
+.expert-stat strong{display:block;font-size:26px;color:var(--main);font-weight:900}
+.comments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review-comment{text-align:right}
+.review-comment .stars{color:#f59e0b;font-size:20px;margin-bottom:8px}
+.review-comment p{color:#5c4636;font-size:17px;font-weight:700}
+.review-comment strong{display:block;margin-top:14px;color:#2b160b}
+.info-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.info-tabs button{border:none;cursor:pointer;padding:15px 10px;border-radius:999px;background:#fff;color:#2b160b;font-weight:900;border:1px solid #ead8bd}
+.info-tabs button.active{background:var(--main);color:#fff}
+.info-content{background:#fff;border:1px solid #ead8bd;border-radius:24px;padding:28px;text-align:center;font-size:19px;color:#5c4636;font-weight:700}
+.faq{background:#fff}
+.faq-item{background:#fff8ee;border:1px solid #ead8bd;border-radius:18px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:18px 20px;font-weight:900;cursor:pointer}
+.faq-a{display:none;padding:0 20px 20px;color:#6b584b;font-weight:700}
+.faq-item.active .faq-a{display:block}
+.final-offer{background:linear-gradient(180deg,#fff7ea,#fff);text-align:center}
+.sticky-order{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 -6px 30px rgba(0,0,0,.18)}
+.sticky-info{font-weight:900}.sticky-info .sub{color:#7b6658;font-size:15px}
+.sticky-order a{min-width:280px;height:64px;border-radius:999px;background:var(--main);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;text-decoration:none}
+.swiper-button-next,.swiper-button-prev{color:#fff;background:var(--main);width:42px;height:42px;border-radius:50%}
+.swiper-button-next:after,.swiper-button-prev:after{font-size:16px}
+.swiper-pagination-bullet-active{background:var(--main)}
+@media(max-width:768px){
+  .section{padding:42px 14px}
+  .stats,.problem-grid,.trust-grid,.expert-stats,.comments-grid{grid-template-columns:1fr 1fr}
+  .benefit-card{grid-template-columns:1fr}
+  .benefit-card:nth-child(even){direction:rtl}
+  .benefit-img{min-height:260px}
+  .benefit-content{padding:24px}
+  .info-tabs{grid-template-columns:1fr 1fr}
+  .sticky-order{padding:10px}
+  .sticky-order a{min-width:165px;height:56px;font-size:18px}
+  .sticky-info .name{font-size:14px}.sticky-info .sub{font-size:12px}
+}
+@media(max-width:480px){
+  .stats,.problem-grid,.trust-grid,.expert-stats,.comments-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<header class="hero">
+  <span class="badge">حجامة منزلية باحترافية</span>
+  <h1>تعب مستمر؟ صداع؟ شد في الرقبة وآلام في الظهر؟</h1>
+  <p>جلسة حجامة منزلية مع أبو سفيان تساعدك على الشعور براحة أكبر واسترخاء أعمق داخل منزلك بكل خصوصية وتعقيم.</p>
+
+  <div class="stats">
+    <div class="stat"><strong>+300</strong><span>عميل استفادوا من الخدمة</span></div>
+    <div class="stat"><strong>منزلي</strong><span>الخدمة تجيك للبيت</span></div>
+    <div class="stat"><strong>تعقيم</strong><span>أدوات منظمة وآمنة</span></div>
+    <div class="stat"><strong>خصوصية</strong><span>راحة كاملة داخل منزلك</span></div>
+  </div>
+
+  <a href="#order" class="cta-btn">احجز الآن عبر واتساب</a>
+  <div class="note">حجز سريع • خصوصية كاملة • خدمة منزلية</div>
+</header>
+
+<section class="section">
+  <div class="swiper product-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://d.top4top.io/p_38228uq9j3.png"></div>
+      <div class="swiper-slide"><img src="https://c.top4top.io/p_3822aubln2.png"></div>
+      <div class="swiper-slide"><img src="https://b.top4top.io/p_38227y5v51.png"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section class="section problem-section">
+  <div class="title">
+    <h2>هل هذا أنت؟</h2>
+    <p>لو أي جملة من هذي بتوصف حالتك، فجلسة الحجامة المنزلية دي معمولة عشانك.</p>
+  </div>
+
+  <div class="problem-grid">
+    <div class="problem-card"><h3>صداع متكرر يفسد يومك</h3><p>تحس إن رأسك ثقيل أو الصداع يرجع لك كثير ويأثر على تركيزك وراحتك.</p></div>
+    <div class="problem-card"><h3>شد في الرقبة والكتفين</h3><p>توتر مستمر في الرقبة أو الكتف، وكأن جسمك مشدود أغلب الوقت.</p></div>
+    <div class="problem-card"><h3>آلام الظهر والأبهر</h3><p>ألم يزعجك وقت الحركة أو الجلوس ويخليك تحس بثقل وعدم راحة.</p></div>
+    <div class="problem-card"><h3>خشونة أو انزلاق غضروفي</h3><p>تبحث عن وسيلة طبيعية تساعدك على الشعور براحة أكبر وتخفيف الضغط اليومي.</p></div>
+    <div class="problem-card"><h3>قولون أو ارتجاع مريء</h3><p>انزعاج داخلي متكرر يخليك تحس إن جسمك غير مرتاح بعد الأكل أو خلال اليوم.</p></div>
+    <div class="problem-card"><h3>شقيقة أو صداع نصفي</h3><p>نوبات مزعجة تخليك تفقد تركيزك وهدوءك وتبحث عن راحة حقيقية.</p></div>
+  </div>
+</section>
+
+<section class="section check-section">
+  <h2>قبل ما تكمل</h2>
+  <p>علّم في ذهنك على كل جملة تنطبق عليك</p>
+
+  <div class="check-list">
+    <div class="check-item">✓ أعاني من صداع أو شد في الرقبة والكتفين بشكل متكرر</div>
+    <div class="check-item">✓ أبحث عن وسيلة طبيعية تساعدني على الشعور براحة أكبر</div>
+    <div class="check-item">✓ أفضل تلقي الخدمة داخل المنزل بدل الخروج والانتظار</div>
+    <div class="check-item">✓ أهتم بالخصوصية والتعقيم الكامل أثناء الجلسة</div>
+    <div class="check-item">✓ أبحث عن مختص لديه خبرة وتجارب كثيرة مع العملاء</div>
+  </div>
+
+  <a href="#benefits" class="cta-btn">اكتشف كيف تتم الجلسة</a>
+</section>
+
+<section class="section">
+  <div class="title">
+    <h2>شاهد الجلسة بالفيديو</h2>
+    <p>فيديو يوضح تجهيز المكان، تعقيم الأدوات، وطريقة العناية داخل المنزل</p>
+  </div>
+
+  <div class="video-box">
+    <video controls playsinline poster="https://j.top4top.io/p_3822pwhjh3.png">
+      <source src="https://h.top4top.io/m_38222vnx91.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="section benefits" id="benefits">
+  <div class="title">
+    <h2>ماذا تمنحك الجلسة؟</h2>
+    <p>جلسة واحدة قد تكون بداية شعور أخف وراحة أكبر</p>
+  </div>
+
+  <div class="benefit-list">
+    <div class="benefit-card">
+      <div class="benefit-img"><img src="https://h.top4top.io/p_3822ackb91.png"></div>
+      <div class="benefit-content">
+        <span>راحة الجسم</span>
+        <h3>تساعدك على الشعور بخفة وراحة أكبر</h3>
+        <p>جلسة مصممة لمساعدتك على الاسترخاء وتقليل الإحساس بالإجهاد والتعب اليومي.</p>
+      </div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-img"><img src="https://i.top4top.io/p_38223aw8l2.png"></div>
+      <div class="benefit-content">
+        <span>شد العضلات</span>
+        <h3>اهتمام بالمناطق المجهدة</h3>
+        <p>تركيز على الظهر، الرقبة، والكتفين لمساعدة الجسم على الشعور براحة أفضل.</p>
+      </div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-img"><img src="https://j.top4top.io/p_3822pwhjh3.png"></div>
+      <div class="benefit-content">
+        <span>تعقيم واهتمام</span>
+        <h3>أدوات منظمة وتعقيم أمامك</h3>
+        <p>اهتمام كامل بالنظافة وترتيب الأدوات قبل بداية الجلسة لراحة وطمأنينة أكبر.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="title">
+    <h2>من هو أبو سفيان؟</h2>
+    <p>أخصائي حجامة منزلية يهتم براحتك وخصوصيتك من أول دقيقة</p>
+  </div>
+
+  <div class="expert-box">
+    <h3>أبو سفيان للحجامة المنزلية</h3>
+    <p>أبو سفيان أخصائي حجامة منزلية لديه خبرة عملية في عمل الحجامة بمختلف أنواعها، ويقدم الخدمة داخل المنزل مع اهتمام كامل بالتعقيم، ترتيب الأدوات، اختيار المواضع المناسبة، وراحة العميل أثناء الجلسة.</p>
+    <p>ساعد أكثر من 300 عميل في الحصول على جلسات حجامة منزلية مريحة ومنظمة، مع خصوصية كاملة والتزام بالمواعيد.</p>
+
+    <div class="expert-stats">
+      <div class="expert-stat"><strong>+300</strong><span>عميل</span></div>
+      <div class="expert-stat"><strong>خبير</strong><span>في الحجامة</span></div>
+      <div class="expert-stat"><strong>منزلي</strong><span>يصل إليك</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="title">
+    <h2>آراء عملاء حقيقية</h2>
+    <p>تجارب وتعليقات من عملاء جربوا الجلسة المنزلية</p>
+  </div>
+
+  <div class="comments-grid">
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>والله جلسة مرتبة جدًا، حسيت بفرق في الراحة بعد الجلسة، والأدوات كانت منظمة قدامي.</p>
+      <strong>أبو عبدالله</strong>
+    </div>
+
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>كان عندي شد في الرقبة والكتف، وبعد الجلسة حسيت جسمي أخف. شغل محترم ومواعيد دقيقة.</p>
+      <strong>سالم الحربي</strong>
+    </div>
+
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>أهم شيء عندي التعقيم والخصوصية، وكل شيء كان واضح ومرتب. الله يعطيه العافية.</p>
+      <strong>محمد العتيبي</strong>
+    </div>
+
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>تجربة ممتازة، الخدمة وصلتني في البيت بدون تعب أو انتظار، والأسلوب جدًا مريح.</p>
+      <strong>فهد القحطاني</strong>
+    </div>
+
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>كنت متردد أول مرة، لكن صراحة التعامل والتجهيز طمّنوني. إن شاء الله أكررها.</p>
+      <strong>ناصر الدوسري</strong>
+    </div>
+
+    <div class="review-comment">
+      <div class="stars">★★★★★</div>
+      <p>جلسة هادئة ونظيفة، حسيت براحة واسترخاء بعدها. أنصح فيه للي يحب الخدمة المنزلية.</p>
+      <strong>عبدالعزيز</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="title">
+    <h2>لماذا يثق العملاء بأبو سفيان؟</h2>
+  </div>
+
+  <div class="trust-grid">
+    <div class="trust-card"><strong>خدمة منزلية</strong><p>الحجامة تجيك لين باب بيتك</p></div>
+    <div class="trust-card"><strong>تعقيم كامل</strong><p>اهتمام بالأدوات والنظافة</p></div>
+    <div class="trust-card"><strong>خصوصية تامة</strong><p>راحة كاملة داخل منزلك</p></div>
+    <div class="trust-card"><strong>خبرة عملية</strong><p>أكثر من 300 عميل</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="title">
+    <h2>معلومات مهمة قبل الحجز</h2>
+    <p>تفاصيل الحجز والجلسة والتعقيم والخصوصية</p>
+  </div>
+
+  <div class="info-tabs">
+    <button class="active" onclick="showInfo('booking',this)">تفاصيل الحجز</button>
+    <button onclick="showInfo('session',this)">تفاصيل الجلسة</button>
+    <button onclick="showInfo('sterilization',this)">التعقيم</button>
+    <button onclick="showInfo('privacy',this)">الخصوصية</button>
+  </div>
+
+  <div class="info-content" id="infoBox">
+    يتم الحجز بسهولة عبر واتساب، ثم تحديد الموعد المناسب لك حسب التوفر.
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="title">
+    <h2>أسئلة شائعة</h2>
+    <p>كل اللي في بالك قبل الحجز</p>
+  </div>
+
+  <div class="faq-item active">
+    <div class="faq-q">هل الخدمة منزلية؟</div>
+    <div class="faq-a">نعم، أبو سفيان يقدم خدمة الحجامة المنزلية داخل بيتك حسب الموعد المتفق عليه.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">هل الأدوات معقمة؟</div>
+    <div class="faq-a">نعم، يتم الاهتمام بتجهيز الأدوات وترتيبها والتعقيم قبل بداية الجلسة.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">كم مدة الجلسة؟</div>
+    <div class="faq-a">تختلف مدة الجلسة حسب الحالة ونوع الخدمة المطلوبة، ويتم توضيح التفاصيل عبر واتساب.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">كيف أحجز؟</div>
+    <div class="faq-a">اضغط على زر احجز الآن وسيتم توجيهك مباشرة إلى واتساب لتحديد الموعد.</div>
+  </div>
+</section>
+
+<section class="section final-offer" id="order">
+  <span class="badge">راحتك تبدأ من بيتك</span>
+  <div class="title">
+    <h2>احجز جلستك الآن</h2>
+    <p>خدمة منزلية • خصوصية كاملة • تعقيم واهتمام بالتفاصيل</p>
+  </div>
+
+  <a href="https://api.whatsapp.com/send/?phone=9660548769120&text=السلام%20عليكم%20أرغب%20في%20حجز%20جلسة%20حجامة%20منزلية" class="cta-btn" target="_blank">
+    احجز الآن عبر واتساب
+  </a>
+</section>
+
+</main>
+
+<div class="sticky-order">
+  <div class="sticky-info">
+    <div class="name">أبو سفيان للحجامة المنزلية</div>
+    <div class="sub">حجز سريع عبر واتساب</div>
+  </div>
+
+  <a href="https://api.whatsapp.com/send/?phone=9660548769120&text=السلام%20عليكم%20أرغب%20في%20حجز%20جلسة%20حجامة%20منزلية" target="_blank">
+    احجز الآن
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper('.product-slider',{
+  loop:true,
+  spaceBetween:18,
+  autoplay:{delay:3500,disableOnInteraction:false},
+  pagination:{el:'.product-slider .swiper-pagination',clickable:true},
+  navigation:{nextEl:'.product-slider .swiper-button-next',prevEl:'.product-slider .swiper-button-prev'}
+});
+
+const infoTexts = {
+  booking:'يتم الحجز بسهولة عبر واتساب، ثم تحديد الموعد المناسب لك حسب التوفر.',
+  session:'تتم الجلسة داخل منزلك مع تجهيز المكان والأدوات، ويتم التعامل مع كل حالة حسب احتياجها.',
+  sterilization:'يتم الاهتمام بتجهيز الأدوات وترتيبها وتعقيمها قبل بداية الجلسة لراحة وطمأنينة أكبر.',
+  privacy:'الخدمة تتم داخل منزلك مع مراعاة الخصوصية الكاملة والراحة أثناء الجلسة.'
+};
+
+function showInfo(type,btn){
+  document.getElementById('infoBox').innerText = infoTexts[type];
+  document.querySelectorAll('.info-tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>q.parentElement.classList.toggle('active'));
+});
+</script>
+
+</body>
+</html>
